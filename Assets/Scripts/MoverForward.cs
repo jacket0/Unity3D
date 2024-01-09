@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class MoverForward : MonoBehaviour
 {
 	[SerializeField] private float _speed;
 	[SerializeField] private Vector3 _movementDirection;

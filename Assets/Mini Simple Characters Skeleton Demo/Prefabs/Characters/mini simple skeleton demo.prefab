@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2468889828458600031}
   - component: {fileID: 1116371902028168016}
-  - component: {fileID: 2014316235694111440}
+  - component: {fileID: 3760890618681629947}
   m_Layer: 0
   m_Name: mini simple skeleton demo
   m_TagString: Untagged
@@ -330,7 +330,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1696834749189059949}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.94832367, z: 0, w: -0.31730467}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -363,7 +363,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2014316235694111440
+--- !u!114 &3760890618681629947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,11 +372,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696834749189059949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa0cf321ce66a584fb64458e2ebfb5d4, type: 3}
+  m_Script: {fileID: 11500000, guid: ae79a55f2e39832448924959ae7b3e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 1
-  _movementDirection: {x: 0, y: 0, z: 1}
+  _movementDirection: {x: 0, y: 0, z: 0}
 --- !u!1 &1818926580354158373
 GameObject:
   m_ObjectHideFlags: 0

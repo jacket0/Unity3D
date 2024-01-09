@@ -1,14 +1,16 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	[SerializeField] private GameObject _enemy;
+	[SerializeField] private Enemy _enemy;
 	[SerializeField] private Transform[] _spawnPoints;
 
-	private void Start()
+	private Quaternion _rotation;
+
+	private void Awake()
 	{
+		_enemy.SetDirection(Random.Range(0, 360));
 		Shuffle(_spawnPoints);
 		StartCoroutine(nameof(CreateEnemy));
 	}
@@ -17,7 +19,7 @@ public class Spawner : MonoBehaviour
 	{
 		for (int i = 0; i < _spawnPoints.Length; i++)
 		{
-			Instantiate(_enemy, _spawnPoints[i].position, Quaternion.identity);
+			Instantiate(_enemy, _spawnPoints[i].position, _rotation.normalized);
 			yield return new WaitForSecondsRealtime(2);
 		}
 	}
