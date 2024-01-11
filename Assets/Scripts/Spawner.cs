@@ -6,11 +6,8 @@ public class Spawner : MonoBehaviour
 	[SerializeField] private Enemy _enemy;
 	[SerializeField] private Transform[] _spawnPoints;
 
-	private Quaternion _rotation;
-
-	private void Awake()
+	private void Start()
 	{
-		_enemy.SetDirection(Random.Range(0, 360));
 		Shuffle(_spawnPoints);
 		StartCoroutine(nameof(CreateEnemy));
 	}
@@ -19,7 +16,8 @@ public class Spawner : MonoBehaviour
 	{
 		for (int i = 0; i < _spawnPoints.Length; i++)
 		{
-			Instantiate(_enemy, _spawnPoints[i].position, _rotation.normalized);
+			var newEnemy = Instantiate(_enemy, _spawnPoints[i].position, Quaternion.identity);
+			newEnemy.SetDirection(Random.Range(0, 360));
 			yield return new WaitForSecondsRealtime(2);
 		}
 	}
