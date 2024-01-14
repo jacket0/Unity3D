@@ -6,6 +6,7 @@ public class Spawner : MonoBehaviour
 	[SerializeField] private Enemy _enemy;
 	[SerializeField] private Transform[] _spawnPoints;
 	[SerializeField] private float _waitSecond = 2f;
+ 
 	private void Start()
 	{
 		Shuffle(_spawnPoints);
