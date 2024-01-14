@@ -5,7 +5,7 @@ public class Spawner : MonoBehaviour
 {
 	[SerializeField] private Enemy _enemy;
 	[SerializeField] private Transform[] _spawnPoints;
-
+	[SerializeField] private float _waitSecond = 2f;
 	private void Start()
 	{
 		Shuffle(_spawnPoints);
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
 		{
 			var newEnemy = Instantiate(_enemy, _spawnPoints[i].position, Quaternion.identity);
 			newEnemy.SetDirection(Random.Range(0, 360));
-			yield return new WaitForSecondsRealtime(2);
+			yield return new WaitForSecondsRealtime(_waitSecond);
 		}
 	}
 
