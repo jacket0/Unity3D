@@ -3,26 +3,25 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-	[SerializeField] private Enemy _enemy;
-	[SerializeField] private Transform[] _spawnPoints;
+	[SerializeField] private SpawnPoint[] _spawnPoints;
+	[SerializeField] private int _waitSeconds = 2;
 
 	private void Start()
 	{
 		Shuffle(_spawnPoints);
-		StartCoroutine(nameof(CreateEnemy));
+		StartCoroutine(nameof(CreateEnemies));
 	}
 
-	private IEnumerator CreateEnemy()
+	private IEnumerator CreateEnemies()
 	{
 		for (int i = 0; i < _spawnPoints.Length; i++)
 		{
-			var newEnemy = Instantiate(_enemy, _spawnPoints[i].position, Quaternion.identity);
-			newEnemy.SetDirection(Random.Range(0, 360));
-			yield return new WaitForSecondsRealtime(2);
+			_spawnPoints[i].CreateEnemy(_spawnPoints[i].transform.position);
+			yield return new WaitForSecondsRealtime(_waitSeconds);
 		}
 	}
 
-	private void Shuffle(Transform[] _spawnPoints)
+	private void Shuffle(SpawnPoint[] _spawnPoints)
 	{
 		for (int i = 0; i < _spawnPoints.Length - 1; i++)
 		{
