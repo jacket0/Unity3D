@@ -390,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3854269363171675655}
   - component: {fileID: 4985691113074979274}
-  - component: {fileID: 492226640121939771}
+  - component: {fileID: -4261842953367942357}
   m_Layer: 0
   m_Name: mini simple skeleton demo_01
   m_TagString: Untagged
@@ -408,7 +408,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9118192618357503961}
@@ -439,7 +439,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &492226640121939771
+--- !u!114 &-4261842953367942357
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -448,10 +448,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3136820629370392942}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae79a55f2e39832448924959ae7b3e6a, type: 3}
+  m_Script: {fileID: 11500000, guid: a262ff17fc2c5fc458c58c603abbdfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 50
+  _speed: 1
 --- !u!1 &3190320679450232660
 GameObject:
   m_ObjectHideFlags: 0

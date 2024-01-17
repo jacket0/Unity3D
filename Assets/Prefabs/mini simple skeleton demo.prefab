@@ -314,7 +314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2468889828458600031}
   - component: {fileID: 1116371902028168016}
-  - component: {fileID: 3760890618681629947}
+  - component: {fileID: -3038009487867893661}
   m_Layer: 0
   m_Name: mini simple skeleton demo
   m_TagString: Untagged
@@ -332,8 +332,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9702957, z: 0, w: -0.24192187}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 9151124690889375014}
   - {fileID: 6621290949276796938}
@@ -363,7 +363,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3760890618681629947
+--- !u!114 &-3038009487867893661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,10 +372,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1696834749189059949}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae79a55f2e39832448924959ae7b3e6a, type: 3}
+  m_Script: {fileID: 11500000, guid: a262ff17fc2c5fc458c58c603abbdfce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 50
+  _speed: 1
 --- !u!1 &1818926580354158373
 GameObject:
   m_ObjectHideFlags: 0

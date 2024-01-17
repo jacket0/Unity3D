@@ -14,10 +14,12 @@ public class Spawner : MonoBehaviour
 
 	private IEnumerator CreateEnemies()
 	{
+		var waiting = new WaitForSecondsRealtime(_waitSeconds);
+
 		for (int i = 0; i < _spawnPoints.Length; i++)
 		{
 			_spawnPoints[i].CreateEnemy(_spawnPoints[i].transform.position);
-			yield return new WaitForSecondsRealtime(_waitSeconds);
+			yield return waiting;
 		}
 	}
 
